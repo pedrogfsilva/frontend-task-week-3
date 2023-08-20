@@ -47,14 +47,14 @@ function App() {
   },[]);
 
   const getAllTasks = () => {
-    axios.get("http://ec2-54-197-216-215.compute-1.amazonaws.com:3001/task").then((response) => {
+    axios.get("http://ec2-3-90-143-3.compute-1.amazonaws.com:3001/task").then((response) => {
       setTasks(response.data);
     });
   };
 
   // make an axios post call to the backend
   const makePostCall = () => {
-    axios.post("http://ec2-54-197-216-215.compute-1.amazonaws.com:3001/task", {
+    axios.post("http://ec2-3-90-143-3.compute-1.amazonaws.com:3001/task", {
       name: name,
       description: description,
       hours: hours,
@@ -72,13 +72,13 @@ function App() {
   },[]);
 
   const getAllEmployees = () => {
-    axios.get("http://ec2-54-197-216-215.compute-1.amazonaws.com:3001/employees").then((response) => {
+    axios.get("http://ec2-3-90-143-3.compute-1.amazonaws.com:3001/employees").then((response) => {
       setEmployees(response.data);
     });
   };
 
   const makePostCallEmployee = () => {
-    axios.post("http://ec2-54-197-216-215.compute-1.amazonaws.com:3001/employees", {
+    axios.post("http://ec2-3-90-143-3.compute-1.amazonaws.com:3001/employees", {
       name: employeeName,
       address: employeeAddress,
     }).then((result) => {
